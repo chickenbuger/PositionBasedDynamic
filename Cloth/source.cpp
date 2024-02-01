@@ -19,7 +19,6 @@ bool simulation = false;
 PBD_Cloth* _pbd;
 
 
-
 void Init(void)
 {
 	glEnable(GL_DEPTH_TEST);
@@ -156,6 +155,7 @@ int main(int argc, char** argv)
 	glutInitWindowSize(width, height);
 	glutInitWindowPosition(100, 100);
 	glutCreateWindow("Position Based Dynamics");
+
 	glutDisplayFunc(Display);
 	glutReshapeFunc(Reshape);
 	glutIdleFunc(Update);
@@ -163,6 +163,8 @@ int main(int argc, char** argv)
 	glutMotionFunc(Motion);
 	glutKeyboardFunc(Keyboard);
 	glutSpecialFunc(SpecialInput);
+
 	Init();
+
 	glutMainLoop();
 }
